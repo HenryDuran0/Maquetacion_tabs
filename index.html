@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="titulo">
+        <p class="azul">OUR WORKS</p>
+        <h1>Lastes projects</h1>
+    </div>
+
+    <ul class="tabs ancho">
+        <li><a href="#tab1">ALL ITEAMS</a></li>
+        <li><a href="#tab2">MOBILE APP</a></li>
+        <li><a href="#tab3">WEB APP</a></li>
+        <li><a href="#tab4">CUSTOM SOFT</a></li>
+        <li><a href="#tab5">UI/UX</a></li>
+    </ul>
+    <div class="cont_info ancho">
+        <div class="tab_info tab1" id="tab1">
+            <figure class="img1">
+                <img src="imagenes/port2.png" alt="">
+            </figure>
+            <figure class="img2">
+                <img src="imagenes/port3.jpg" alt="">
+            </figure>
+            <figure class="img3">
+                <img src="imagenes/port6.jpg" alt="">
+            </figure>
+            <figure class="img4">
+                <img src="imagenes/port7.jpg" alt="">
+            </figure>
+            <figure class="img5">
+                <img src="imagenes/port7.jpg" alt="">
+            </figure>
+        </div>
+        <div class="tab_info tab2" id="tab2">
+            <figure class="img4">
+                <img src="imagenes/port7.jpg" alt="">
+            </figure>
+            <figure class="img3">
+                <img src="imagenes/port6.jpg" alt="">
+            </figure>
+        </div>
+        <div class="tab_info tab3" id="tab3">
+            <figure class="img1">
+                <img src="imagenes/port2.png" alt="">
+            </figure>
+        </div>
+        <div class="tab_info tab4" id="tab4">
+            <figure class="img3">
+                <img src="imagenes/port6.jpg" alt="">
+            </figure>
+            <figure class="img4">
+                <img src="imagenes/port7.jpg" alt="">
+            </figure>
+        </div>
+        <div class="tab_info tab5" id="tab5">
+            <figure class="img4">
+                <img src="imagenes/port7.jpg" alt="">
+            </figure>
+            <figure class="img1">
+                <img src="imagenes/port2.png" alt="">
+            </figure>
+        </div>
+    </div>
+
+    <div class="btn_abajo">
+        <a href="#">VIEW ALL SOFTWARE →</a>
+    </div>
+
+    <!-- Scripts -->
+
+    <script>
+        //Oculta todo el contendi
+        $(".tab_info").hide();
+
+        //Active el css del primer tab
+        $("ul.tabs li:first").addClass("active");
+        //Muestra el contenido del primer tab
+        $(".tab_info:first").show();
+
+        $("ul.tabs li").click(function() {
+            //Quita la clase active
+            $("ul.tabs li").removeClass("active");
+            //Agrega la clase active al tab seleccionado
+            $(this).addClass("active");
+            //Oculta el contenido de las pestañas
+            $(".tab_info").hide();
+            var activeTab = $(this).find("a").attr("href");
+            //Aparece el contenedor activo
+            $(activeTab).fadeIn();
+            return false;
+        });
+    </script>
+</body>
+</html>

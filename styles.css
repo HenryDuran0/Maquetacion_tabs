@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 1200px;
+    margin: auto;
+    color: #333;
+    background-color:#f0f3f8;
+}
+
+/* titulo */
+
+.titulo {
+    background-color:#f0f3f8;
+    text-align: left;
+    padding: 30px;
+}
+
+.azul {
+    color: #26b4fc;
+    margin-bottom: 10px;
+}
+
+/* Cinta de opciones */
+
+ul.tabs {
+    background-color:#f0f3f8;
+    list-style: none;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+ul.tabs li {
+    border-radius: 10px;
+    width: fit-content;
+    text-align: center;
+}
+
+ul.tabs li a {
+    /* border: 2px red solid; */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    padding: 10px 30px;
+}
+
+ul.tabs li a:hover {
+    background-color: #0973d7;
+    color: white;
+    border-radius: 10px;
+}
+
+html ul.tabs li.active {
+    background-color: #0973d7;
+}
+
+html ul.tabs li.active a {
+    color: white;
+}
+
+html ul.tabs li.active a:hover {
+    background-color: #0973d7;
+    color: white;
+}
+
+.tab_info {
+    /* border: 2px green solid; */
+    background-color:#f0f3f8;
+}
+
+.fig_tab {
+    border: 2px red solid;
+    display: flex;
+}
+
+.fig_tab img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.btn_abajo {
+    /* border: 2px red solid; */
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.btn_abajo a {
+    background-color: #109cfe;
+    color: white;
+    text-decoration: none;
+    padding: 20px 40px;
+}
+
+/* Tab 1 */
+
+.tab1 {
+    grid-template-areas: "d a a" "e c b";
+}
+
+.tab_info {
+    display: grid;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.tab_info figure {
+    display: flex;
+    margin: 0;
+}
+
+.tab_info figure img {
+    width: 100%;
+}
+
+.img1 {
+    grid-area: a;
+}
+
+.img2 {
+    grid-area: b;
+}
+
+.img3 {
+    grid-area: c;
+}
+
+.img4 {
+    grid-area: d;
+}
+
+.img5 {
+    grid-area: e;
+}
+
+/* Tab 2 */
+
+.tab2 {
+    grid-template-areas: "d c";
+}
+
+/* Tab 3 */
+
+.tab3 {
+    grid-template-areas: "a a";
+}
+
+/* Tab 4 */
+
+.tab4 {
+    grid-template-areas: "c d";
+}
+
+/* Tab 5 */
+
+.tab5 {
+    grid-template-areas: "d a a";
+}
+
